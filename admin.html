@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>لوحة التحكم – المستشفى الإسلامي</title>
+<meta name="description" content="المستشفى الإسلامي في عمّان: رعاية صحية شاملة وآمنة وعالية الجودة، 22 قسماً وأكثر من 54 عيادة تخصصية.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="https://islamic-hospital.org/assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>document.addEventListener('error',function(e){if(e.target.tagName==='IMG')e.target.classList.add('broken')},true)</script>
+</head>
+<body data-page="admin" class="admin-mode">
+<!-- SVG icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M3 21l1.7-5A8.5 8.5 0 1 1 8 19.4L3 21"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 .8a4 4 0 0 1-2-2l.8-1-1-2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></symbol>
+  <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16v4zM14 6l4 4"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="m6 15 6-6 6 6"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v6H4V6h6"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+</svg>
+
+<main id="content">
+<section>
+  <div class="adm">
+    <aside class="adm-side">
+      <a class="adm-brand" href="admin.html"><b>لوحة التحكم</b><small>المستشفى الإسلامي</small></a>
+      <nav class="adm-nav" id="admNav" aria-label="أقسام لوحة التحكم"></nav>
+      <div class="adm-tools">
+        <a href="index.html"><svg class="i"><use href="#i-ext"/></svg>عرض الموقع</a>
+        <button type="button" data-tool="export">تصدير البيانات (JSON)</button>
+        <label>استيراد البيانات<input type="file" accept="application/json,.json" id="admImport" hidden></label>
+        <button type="button" data-tool="reset" class="danger">استعادة المحتوى الأصلي</button>
+      </div>
+    </aside>
+    <div class="adm-main">
+      <div class="adm-top">
+        <div><div class="crumbs"><a href="admin.html">لوحة التحكم</a><span>/</span><span id="admCrumb"></span></div><h1 id="admTitle"></h1></div>
+        <div id="admActions"></div>
+      </div>
+      <p class="adm-note">نسخة تجريبية: التعديلات تُحفظ في هذا المتصفح فقط وتظهر فوراً في الموقع. لنقلها إلى جهاز آخر استخدم «تصدير البيانات» ثم «استيراد البيانات».</p>
+      <div id="admBody"></div>
+    </div>
+  </div>
+  <dialog class="adm-dlg" id="admDlg"></dialog>
+</section>
+</main>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/admin.js"></script>
+</body>
+</html>
